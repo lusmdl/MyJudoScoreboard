@@ -31,5 +31,5 @@
 *.out
 *.app
 
-# Folder
-bulid*/
+# Ignore folders starting with 'build-'
+/build*/
