@@ -39,7 +39,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Steup</string>
+         <string>Einstellungen</string>
         </property>
        </widget>
       </item>
@@ -52,7 +52,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Preperation</string>
+         <string>Vorbereitung</string>
         </property>
        </widget>
       </item>
@@ -65,7 +65,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Control</string>
+         <string>Bedienung</string>
         </property>
        </widget>
       </item>
@@ -115,7 +115,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="_0_start">
        <property name="sizePolicy">
@@ -181,7 +181,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <layout class="QGridLayout" name="gridLayout" columnminimumwidth="9999,0,0">
+         <layout class="QGridLayout" name="_1_layout" columnminimumwidth="9999,50,100">
           <property name="leftMargin">
            <number>0</number>
           </property>
@@ -194,189 +194,52 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item row="5" column="0" alignment="Qt::AlignRight">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Kampfzeit</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="2">
-           <widget class="QCheckBox" name="checkBox_4">
-            <property name="text">
-             <string>golden Score</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_11">
-            <property name="text">
-             <string>Sieg Ziel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QTimeEdit" name="timeEdit"/>
-          </item>
-          <item row="13" column="1">
-           <widget class="Line" name="line_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="15" column="2">
-           <widget class="QCheckBox" name="checkBox_2">
+          <item row="10" column="2">
+           <widget class="QCheckBox" name="_1_checkWinSum">
             <property name="text">
              <string>aktiv</string>
             </property>
            </widget>
           </item>
-          <item row="18" column="0">
-           <widget class="Line" name="line_7">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="18" column="1">
-           <widget class="Line" name="line_8">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="15" column="0" alignment="Qt::AlignRight">
-           <widget class="QLabel" name="label_5">
+          <item row="11" column="2">
+           <widget class="QCheckBox" name="_1_checkWinIppon">
             <property name="text">
-             <string>Wazari</string>
+             <string>aktiv</string>
             </property>
            </widget>
           </item>
-          <item row="17" column="0">
-           <widget class="QLabel" name="label_10">
-            <property name="text">
-             <string>Strafen</string>
-            </property>
-           </widget>
-          </item>
-          <item row="19" column="1">
-           <widget class="QSpinBox" name="spinBox">
-            <property name="maximumSize">
-             <size>
-              <width>105</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1" alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>MM:SS</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1">
-           <widget class="Line" name="line_11">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="0" alignment="Qt::AlignRight">
+          <item row="11" column="0" alignment="Qt::AlignRight">
            <widget class="QLabel" name="label_13">
             <property name="text">
              <string>Ippon</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Kampfzeit</string>
-            </property>
-           </widget>
-          </item>
-          <item row="10" column="0" alignment="Qt::AlignRight">
-           <widget class="QLabel" name="label_14">
-            <property name="text">
-             <string>Wazari</string>
-            </property>
-           </widget>
-          </item>
-          <item row="20" column="0">
-           <widget class="QPushButton" name="pushButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>Anwenden</string>
-            </property>
-           </widget>
-          </item>
-          <item row="16" column="1">
-           <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
-          </item>
-          <item row="16" column="0" alignment="Qt::AlignRight">
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>Yuko</string>
-            </property>
-           </widget>
-          </item>
-          <item row="14" column="2">
-           <widget class="QCheckBox" name="checkBox">
-            <property name="text">
-             <string>aktiv</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="Line" name="line_6">
+          <item row="9" column="0">
+           <widget class="Line" name="line_10">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
-          <item row="16" column="2">
-           <widget class="QCheckBox" name="checkBox_3">
-            <property name="text">
-             <string>aktiv</string>
-            </property>
-           </widget>
+          <item row="12" column="1">
+           <widget class="QSpinBox" name="_1_numWinWazari"/>
           </item>
-          <item row="11" column="1">
-           <widget class="QSpinBox" name="spinBox_4"/>
-          </item>
-          <item row="14" column="1">
-           <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
-          </item>
-          <item row="18" column="2">
-           <widget class="Line" name="line_9">
+          <item row="15" column="0">
+           <widget class="Line" name="line_4">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
-          <item row="14" column="0" alignment="Qt::AlignRight">
-           <widget class="QLabel" name="label_3">
+          <item row="12" column="2">
+           <widget class="QCheckBox" name="_1_checkWinWazari">
             <property name="text">
-             <string>Ippon</string>
+             <string>aktiv</string>
             </property>
            </widget>
           </item>
-          <item row="20" column="2">
+          <item row="22" column="2">
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -392,27 +255,31 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
            </spacer>
           </item>
-          <item row="19" column="2">
-           <widget class="QCheckBox" name="checkBox_5">
+          <item row="20" column="0">
+           <widget class="Line" name="line_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Wazari</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="Line" name="line_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="2">
+           <widget class="QCheckBox" name="_1_checkWazari">
             <property name="text">
              <string>aktiv</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="Line" name="line_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="10" column="1">
-           <widget class="QSpinBox" name="spinBox_3"/>
-          </item>
-          <item row="13" column="0">
-           <widget class="Line" name="line_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -432,15 +299,134 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
            </widget>
           </item>
-          <item row="11" column="0" alignment="Qt::AlignRight">
+          <item row="2" column="1">
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2">
+           <widget class="Line" name="line_12">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="21" column="1">
+           <widget class="QSpinBox" name="_1_numMaxShido">
+            <property name="maximumSize">
+             <size>
+              <width>105</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="19" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Strafen</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="2">
+           <widget class="QCheckBox" name="_1_checkIppon">
+            <property name="text">
+             <string>aktiv</string>
+            </property>
+           </widget>
+          </item>
+          <item row="20" column="2">
+           <widget class="Line" name="line_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="1">
+           <widget class="QDoubleSpinBox" name="_1_valueWazari"/>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Sieg Ziel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Summer der gesammelten Punkte</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QTimeEdit" name="_1_timeHoldWazari"/>
+          </item>
+          <item row="13" column="1">
+           <widget class="QSpinBox" name="_1_numWinYuko"/>
+          </item>
+          <item row="1" column="1" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>MM:SS</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Kampfzeit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0" alignment="Qt::AlignRight">
            <widget class="QLabel" name="label_15">
             <property name="text">
              <string>Yuko</string>
             </property>
            </widget>
           </item>
-          <item row="11" column="2">
-           <widget class="QCheckBox" name="checkBox_6">
+          <item row="6" column="1">
+           <widget class="QTimeEdit" name="_1_timeHoldIppon"/>
+          </item>
+          <item row="18" column="1">
+           <widget class="QDoubleSpinBox" name="_1_valueYuko"/>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTimeEdit" name="_1_timeFight"/>
+          </item>
+          <item row="15" column="2">
+           <widget class="Line" name="line_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Wazari-Haltegriff-Zeit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>Anzahl</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QCheckBox" name="_1_checkHoldIppon">
+            <property name="text">
+             <string>aktiv</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QCheckBox" name="_1_checkHoldWazari">
             <property name="text">
              <string>aktiv</string>
             </property>
@@ -453,82 +439,149 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
            </widget>
           </item>
-          <item row="12" column="0">
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Wurf Wertung</string>
-            </property>
-           </widget>
-          </item>
-          <item row="13" column="2">
-           <widget class="Line" name="line_5">
+          <item row="15" column="1">
+           <widget class="Line" name="line_3">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
-          <item row="9" column="1">
-           <widget class="QSpinBox" name="spinBox_2"/>
+          <item row="16" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Ippon</string>
+            </property>
+           </widget>
           </item>
-          <item row="10" column="2">
-           <widget class="QCheckBox" name="checkBox_7">
+          <item row="18" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Yuko</string>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="2">
+           <widget class="QCheckBox" name="_1_checkYuko">
             <property name="text">
              <string>aktiv</string>
             </property>
            </widget>
           </item>
-          <item row="12" column="1" alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>Punkte</string>
-            </property>
-           </widget>
-          </item>
-          <item row="15" column="1">
-           <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
-          </item>
-          <item row="7" column="2">
-           <widget class="Line" name="line_12">
+          <item row="20" column="1">
+           <widget class="Line" name="line_8">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
-          <item row="19" column="0" alignment="Qt::AlignRight">
+          <item row="13" column="2">
+           <widget class="QCheckBox" name="_1_checkWinYuko">
+            <property name="text">
+             <string>aktiv</string>
+            </property>
+           </widget>
+          </item>
+          <item row="21" column="0" alignment="Qt::AlignRight">
            <widget class="QLabel" name="label_9">
             <property name="text">
              <string>Maximum Shido -&gt; Hansegumake</string>
             </property>
            </widget>
           </item>
-          <item row="9" column="2">
-           <widget class="QCheckBox" name="checkBox_8">
+          <item row="14" column="1" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>aktiv</string>
+             <string>Punkte</string>
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
-           <widget class="Line" name="line_10">
+          <item row="6" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Ippon-Haltegriff-Zeit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="Line" name="line_11">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
-          <item row="8" column="0" alignment="Qt::AlignRight">
-           <widget class="QLabel" name="label_16">
+          <item row="5" column="2">
+           <widget class="QCheckBox" name="_1_checkGoldenScore">
             <property name="text">
-             <string>Summer der gesammelten Punkte</string>
+             <string>golden Score</string>
             </property>
            </widget>
           </item>
-          <item row="8" column="1">
-           <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+          <item row="5" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Kampfzeit</string>
+            </property>
+           </widget>
           </item>
-          <item row="8" column="2">
-           <widget class="QCheckBox" name="checkBox_9">
+          <item row="10" column="1">
+           <widget class="QDoubleSpinBox" name="_1_numWinPoints"/>
+          </item>
+          <item row="21" column="2">
+           <widget class="QCheckBox" name="_1_checkHansegumake">
             <property name="text">
              <string>aktiv</string>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="0" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Wazari</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Wurf Wertung</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QSpinBox" name="_1_numWinIppon"/>
+          </item>
+          <item row="16" column="1">
+           <widget class="QDoubleSpinBox" name="_1_valueIppon"/>
+          </item>
+          <item row="22" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QPushButton" name="_1_btnExport">
+              <property name="text">
+               <string>exportieren</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_1_btnImport">
+              <property name="text">
+               <string>importieren</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_1_btnApply">
+              <property name="text">
+               <string>anwenden</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="19" column="1" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>Anzahl</string>
             </property>
            </widget>
           </item>
