@@ -36,7 +36,7 @@ Violation of the following limits or rules necessitates splitting the object.
 ### Method Size
 
 - Maximum of 5 statements per function.
-- Maximum of 20 to 100 lines per function.
+- Maximum of 40 lines per function.
 
 ### File Length
 
@@ -74,7 +74,7 @@ Violation of the following limits or rules necessitates splitting the object.
 
 ### Variables
 
-- Named in `camelCase`.
+- Identifier in `camelCase`.
 - Begins with the object it describes, followed by various adjectives for description.
 
 ### Constants, Enum Elements, and Macros
@@ -109,11 +109,12 @@ Violation of the following limits or rules necessitates splitting the object.
 
 Ensure that headers are not included multiple times.
 
-### Preprocessor Directive
+## Documentation
 
-- `#pragma once` is a preprocessor directive in C++ used to prevent the contents of a header file from being included multiple times in a translation unit. It provides a simpler and often more efficient way to protect header files from multiple inclusions compared to the traditional use of `#ifndef`, `#define`, and `#endif`. This directive is widely used and available in most modern compilers.
+Before each Funktion, Method, Class or at the file beginning.
+Generate a Commentblock with @tags for doxygen.
 
-Thank you for paying attention to these important tags.
+We want to generate the documentation automaticly, please make sure you hit the doxygen syntax.
 
 ## Pull Requests
 
