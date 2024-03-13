@@ -165,6 +165,7 @@ void MainWindow::generateScoreboard() {
 
         board = new Scoreboard(this);
         board->setWindowFlags(Qt::Tool); // oder Qt::SubWindow, je nach Bedarf
+        board->setFixedSize(1280, 720); // Setzen Sie die feste Größe
         board->show();
 
         enableBoardFullScreen();
@@ -194,6 +195,19 @@ void MainWindow::enableBoardFullScreen() {
         // Scoreboard im Vollbildmodus anzeigen, nur wenn es bereits erstellt wurde
         if (board != nullptr) {
 
+            /*
+            // Wenn der Vollbildmodus aktiviert ist, passen Sie die Szene des Scoreboards an die Größe des Bildschirms an
+            QScreen *primaryScreen = QGuiApplication::primaryScreen();
+            if (primaryScreen) {
+
+                QRect screenGeometry = primaryScreen->geometry();
+                board->resize(screenGeometry.width(), screenGeometry.height());
+            } else {
+
+                qDebug() << "Failed to access primary screen.";
+            }
+             */
+
             board->showFullScreen();
         }
     }
@@ -203,6 +217,9 @@ void MainWindow::enableBoardFullScreen() {
 
         // Vollbildmodus beenden und Scoreboard im normalen Modus anzeigen, nur wenn es bereits erstellt wurde
         if (board != nullptr) {
+
+            // Wenn der Vollbildmodus deaktiviert ist, setzen Sie die Szene des Scoreboards auf die statische Größe
+            //board->resize(1280, 720);
 
             board->showNormal();
         }

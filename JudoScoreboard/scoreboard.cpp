@@ -52,6 +52,10 @@ void Scoreboard::updateRectsSize() {
 
 void Scoreboard::resizeEvent(QResizeEvent *event) {
     updateRectsSize();
+
+    // Übergeben Sie die gesamte Szene und verwenden Sie die Option Qt::KeepAspectRatio,
+    // um sicherzustellen, dass die Grafik proportional skaliert wird.
+    graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
 }
 
 QGraphicsScene* Scoreboard::getScene() const {
