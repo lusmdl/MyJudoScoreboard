@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -1181,6 +1184,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
             <property name="text">
              <string>Vollbild</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="2" column="0">
@@ -1318,6 +1324,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>_4_checkFullScreen</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>enableBoardFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>enterStartWindow()</slot>
@@ -1326,5 +1348,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <slot>enterControlWindow()</slot>
   <slot>enterBoardWindow()</slot>
   <slot>generateScoreboard()</slot>
+  <slot>enableBoardFullScreen()</slot>
  </slots>
 </ui>

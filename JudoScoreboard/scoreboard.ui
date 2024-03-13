@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Scoreboard</class>
  <widget class="QDialog" name="Scoreboard">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +14,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -31,7 +34,36 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Scoreboard</sender>
+   <signal>rejected()</signal>
+   <receiver>Scoreboard</receiver>
+   <slot>closeBoard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>closeBoard()</slot>
+ </slots>
 </ui>

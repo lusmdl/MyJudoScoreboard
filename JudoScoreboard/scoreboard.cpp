@@ -1,6 +1,6 @@
 #include "scoreboard.h"
 #include "ui_scoreboard.h"
-#include <QVBoxLayout> // Include für QVBoxLayout
+#include <QDebug>
 
 Scoreboard::Scoreboard(QWidget *parent) :
     QDialog(parent),
@@ -49,10 +49,20 @@ void Scoreboard::updateRectsSize() {
     lowerRect->setRect(0, height / 2, width, height / 2);
 }
 
+
 void Scoreboard::resizeEvent(QResizeEvent *event) {
     updateRectsSize();
 }
 
 QGraphicsScene* Scoreboard::getScene() const {
     return scene;
+}
+
+void Scoreboard::closeBoard() {
+
+    // message to the programmer to check if it´s working
+    qDebug() << "close board";
+
+    // trigger signal for the other mainwindow class
+    emit deleteBoardPointer();
 }

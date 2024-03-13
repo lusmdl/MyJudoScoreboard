@@ -5,6 +5,9 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsRectItem>
+#include <QCloseEvent>
+#include <QVBoxLayout>
+
 
 namespace Ui {
 class Scoreboard;
@@ -14,24 +17,31 @@ class Scoreboard : public QDialog
 {
     Q_OBJECT
 
-public:
-    explicit Scoreboard(QWidget *parent = nullptr);
-    ~Scoreboard();
+    signals:
+        void deleteBoardPointer();
 
-    QGraphicsScene* getScene() const;
 
-protected:
-    void resizeEvent(QResizeEvent *event) override;
+    public:
+        explicit Scoreboard(QWidget *parent = nullptr);
+        ~Scoreboard();
 
-private:
-    Ui::Scoreboard *ui;
-    QGraphicsScene *scene;
-    QGraphicsView *graphicsView;
-    QGraphicsRectItem *upperRect;
-    QGraphicsRectItem *lowerRect;
+        QGraphicsScene* getScene() const;
 
-    void createRects();
-    void updateRectsSize();
+    protected:
+        void resizeEvent(QResizeEvent *event) override;
+
+    private:
+        Ui::Scoreboard *ui;
+        QGraphicsScene *scene;
+        QGraphicsView *graphicsView;
+        QGraphicsRectItem *upperRect;
+        QGraphicsRectItem *lowerRect;
+
+        void createRects();
+        void updateRectsSize();
+
+    private slots:
+        void closeBoard();
 };
 
 #endif // SCOREBOARD_H

@@ -9,6 +9,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 #include "scoreboard.h"
 
 QT_BEGIN_NAMESPACE
@@ -22,26 +23,29 @@ class MainWindow : public QMainWindow {
 
     Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    public:
+        MainWindow(QWidget *parent = nullptr);
+        ~MainWindow();
 
-private:
-    Ui::MainWindow *ui;
+    private:
+        Ui::MainWindow *ui;
 
-    // creating a global object for the scoreboard
-    Scoreboard *board;
+        // creating a global object for the scoreboard
+        Scoreboard *board;
 
-private slots:
+    private slots:
 
-    //navigate through pages
+        //navigate through pages
 
-    void enterStartWindow();
-    void enterSetupWindow();
-    void enterPreperationWindow();
-    void enterControlWindow();
-    void enterBoardWindow();
-    void generateScoreboard();
+        void enterStartWindow();
+        void enterSetupWindow();
+        void enterPreperationWindow();
+        void enterControlWindow();
+        void enterBoardWindow();
+        void generateScoreboard();
+        void enableBoardFullScreen();
+        void keyPressEvent(QKeyEvent *event);
+        void deleteBoardPointer();
 
 };
 #endif // MAINWINDOW_H

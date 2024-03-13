@@ -9,23 +9,28 @@
 #include "ui_mainwindow.h"
 #include "scoreboard.h"
 #include <QDebug>
+#include <QTimer>
 
 /**
 *@breif  
 *@param
 *@return
 */
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
-    
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), board(nullptr) {
+
     // constructor
 
     qDebug() << "MainWindow constructor called.";
-    
+
     ui->setupUi(this);
 
     // show only at opening
     enterStartWindow();
+
+    // Setzen Sie die WindowFlags, um das Hauptfenster über anderen Fenstern zu halten
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 }
+
 
 MainWindow::~MainWindow() {
 
@@ -33,6 +38,13 @@ MainWindow::~MainWindow() {
 
     // debug information
     qDebug() << "MainWindow destructor called.";
+
+    // Falls das Scoreboard-Objekt existiert, löschen Sie es und setzen Sie den Pointer auf nullptr
+    if (board != nullptr) {
+        delete board;
+        board = nullptr;
+    }
+
     delete ui;
 }
 
@@ -144,13 +156,86 @@ void MainWindow::enterBoardWindow() {
 
 void MainWindow::generateScoreboard() {
 
-    // generate the Scoreboard
-
     qDebug() << "open Board";
 
-    // creating object an open window
-    board = new Scoreboard(this);
-    board->show();
+    // Erstellen Sie ein neues Scoreboard-Objekt, falls keins vorhanden ist
+    if (!board) {
+
+        qDebug() << "generate new board";
+
+        board = new Scoreboard(this);
+        board->setWindowFlags(Qt::Tool); // oder Qt::SubWindow, je nach Bedarf
+        board->show();
+
+        enableBoardFullScreen();
+
+        // Verbindung des Signals `deleteBoardPointer()` des Scoreboard-Objekts mit der Slot-Funktion `deleteBoardPointer()` der MainWindow-Klasse
+        connect(board, &Scoreboard::deleteBoardPointer, this, &MainWindow::deleteBoardPointer);
+
+        // MainWindow aktivieren, um es über dem Scoreboard zu platzieren
+        this->raise();
+        this->activateWindow();
+    }
+    else {
+
+        qDebug() << "the board window already exists, it's not necessary to generate a new one";
+    }
 
 }
 
+
+
+void MainWindow::enableBoardFullScreen() {
+
+    if (ui->_4_checkFullScreen->isChecked()) {
+
+        qDebug() << "enable full screen";
+
+        // Scoreboard im Vollbildmodus anzeigen, nur wenn es bereits erstellt wurde
+        if (board != nullptr) {
+
+            board->showFullScreen();
+        }
+    }
+    else {
+
+        qDebug() << "disable full screen";
+
+        // Vollbildmodus beenden und Scoreboard im normalen Modus anzeigen, nur wenn es bereits erstellt wurde
+        if (board != nullptr) {
+
+            board->showNormal();
+        }
+    }
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event) {
+
+    // Überprüfen, ob die gedrückte Taste die Escape-Taste ist
+
+    if (event->key() == Qt::Key_Escape) {
+
+        // Scoreboard schließen, wenn es geöffnet ist
+
+        if (board != nullptr && board->isVisible()) {
+
+            board->close();
+        }
+    }
+
+    // Weiterleitung an die Basisimplementierung für andere Tastenereignisse
+    QMainWindow::keyPressEvent(event);
+}
+
+void MainWindow::deleteBoardPointer() {
+
+    if (board) {
+
+        // Löschen Sie den Board-Pointer, wenn das Scoreboard-Fenster abgelehnt wird
+
+        qDebug() << "delete board pointer";
+
+        delete board;
+        board = nullptr;
+    }
+}
