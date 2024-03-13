@@ -9,6 +9,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "scoreboard.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -28,6 +29,9 @@ public:
 private:
     Ui::MainWindow *ui;
 
+    // creating a global object for the scoreboard
+    Scoreboard *board;
+
 private slots:
 
     //navigate through pages
@@ -37,6 +41,7 @@ private slots:
     void enterPreperationWindow();
     void enterControlWindow();
     void enterBoardWindow();
+    void generateScoreboard();
 
 };
 #endif // MAINWINDOW_H

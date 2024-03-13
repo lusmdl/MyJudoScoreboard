@@ -115,7 +115,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="_0_start">
        <property name="sizePolicy">
@@ -539,22 +539,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <widget class="QWidget" name="_2_Preperation">
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
-         <layout class="QGridLayout" name="gridLayout_4">
+         <layout class="QGridLayout" name="_2_gridLayout">
           <item row="4" column="3">
-           <widget class="QDateEdit" name="dateEdit"/>
+           <widget class="QDateEdit" name="_2_dateBirth"/>
           </item>
           <item row="2" column="2" colspan="2">
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="_2_delete">
             <property name="text">
              <string>Löschen</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2" colspan="2">
-           <widget class="QComboBox" name="comboBox_2"/>
+           <widget class="QComboBox" name="_2_dbEntry"/>
           </item>
           <item row="5" column="3">
-           <widget class="QSpinBox" name="spinBox">
+           <widget class="QSpinBox" name="_2_weight">
             <property name="toolTip">
              <string/>
             </property>
@@ -564,21 +564,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="2" column="0" colspan="2">
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="_2_save">
             <property name="text">
              <string>Speichern</string>
             </property>
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="label_28">
+           <widget class="QLabel" name="_2_labelSex">
             <property name="text">
              <string>Geschlecht</string>
             </property>
            </widget>
           </item>
           <item row="4" column="2">
-           <widget class="QLabel" name="label_26">
+           <widget class="QLabel" name="_2_labelDateBirth">
             <property name="text">
              <string>Geburtsdatum</string>
             </property>
@@ -601,14 +601,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_23">
+           <widget class="QLabel" name="_2_labelName">
             <property name="text">
              <string>Vorname</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QComboBox" name="comboBox">
+           <widget class="QComboBox" name="_2_sex">
             <item>
              <property name="text">
               <string>Männlich</string>
@@ -622,51 +622,51 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QLineEdit" name="_2_name"/>
           </item>
           <item row="5" column="1">
-           <widget class="QLineEdit" name="lineEdit_5"/>
+           <widget class="QLineEdit" name="_2_organisation"/>
           </item>
           <item row="3" column="2">
-           <widget class="QLabel" name="label_24">
+           <widget class="QLabel" name="_2_labelSurename">
             <property name="text">
              <string>Nachname</string>
             </property>
            </widget>
           </item>
           <item row="5" column="0">
-           <widget class="QLabel" name="label_25">
+           <widget class="QLabel" name="_2_labelOrganisation">
             <property name="text">
              <string>Verein</string>
             </property>
            </widget>
           </item>
           <item row="5" column="2">
-           <widget class="QLabel" name="label_27">
+           <widget class="QLabel" name="_2_labelWeight">
             <property name="text">
              <string>Gewicht</string>
             </property>
            </widget>
           </item>
           <item row="3" column="3">
-           <widget class="QLineEdit" name="lineEdit_4"/>
+           <widget class="QLineEdit" name="_2_surname"/>
           </item>
           <item row="1" column="0" colspan="2">
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="_2_load">
             <property name="text">
              <string>Laden</string>
             </property>
            </widget>
           </item>
           <item row="6" column="0" colspan="2">
-           <widget class="QPushButton" name="pushButton_25">
+           <widget class="QPushButton" name="_2_setWhite">
             <property name="text">
              <string>setzen als Kämpfer Weiß</string>
             </property>
            </widget>
           </item>
           <item row="6" column="2" colspan="2">
-           <widget class="QPushButton" name="pushButton_26">
+           <widget class="QPushButton" name="_2_setBlue">
             <property name="text">
              <string>setzen als Kämpfer Blau</string>
             </property>
@@ -679,9 +679,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <widget class="QWidget" name="_3_Control">
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
-         <layout class="QGridLayout" name="gridLayout_5">
+         <layout class="QGridLayout" name="_3_gridLayout">
           <item row="6" column="1">
-           <widget class="QPushButton" name="pushButton_11">
+           <widget class="QPushButton" name="_3_wazariPlusFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -700,10 +700,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLCDNumber" name="lcdNumber_3"/>
+           <widget class="QLCDNumber" name="_3_wazariFighterWhite"/>
           </item>
           <item row="8" column="2">
-           <widget class="QPushButton" name="pushButton_16">
+           <widget class="QPushButton" name="_3_yukoMinusFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -722,7 +722,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="8" column="0">
-           <widget class="QPushButton" name="pushButton_8">
+           <widget class="QPushButton" name="_3_ipponMinusFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -741,7 +741,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="2" column="4">
-           <widget class="QPushButton" name="pushButton_17">
+           <widget class="QPushButton" name="_3_shidoPlusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -760,7 +760,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="8" column="1">
-           <widget class="QPushButton" name="pushButton_12">
+           <widget class="QPushButton" name="_3_wazariMinusFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -779,7 +779,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="_3_ipponPlusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -798,14 +798,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="6" column="3" rowspan="3">
-           <widget class="Line" name="line_5">
+           <widget class="Line" name="_3_line_3">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
            </widget>
           </item>
           <item row="6" column="0">
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="_3_ipponPlusFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -824,10 +824,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="7" column="4">
-           <widget class="QLCDNumber" name="lcdNumber_8"/>
+           <widget class="QLCDNumber" name="_3_shidoFighterBlue"/>
           </item>
           <item row="4" column="2">
-           <widget class="QPushButton" name="pushButton_14">
+           <widget class="QPushButton" name="_3_yukoMinusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -846,20 +846,20 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="7" column="0">
-           <widget class="QLCDNumber" name="lcdNumber_2"/>
+           <widget class="QLCDNumber" name="_3_ipponFighterBlue"/>
           </item>
           <item row="2" column="3" rowspan="3">
-           <widget class="Line" name="line_3">
+           <widget class="Line" name="_3_line_2">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLCDNumber" name="lcdNumber"/>
+           <widget class="QLCDNumber" name="_3_ipponFighterWhite"/>
           </item>
           <item row="6" column="4">
-           <widget class="QPushButton" name="pushButton_19">
+           <widget class="QPushButton" name="_3_shidoPlusFighterBlue">
             <property name="minimumSize">
              <size>
               <width>50</width>
@@ -867,12 +867,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
              </size>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Shido++</string>
             </property>
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="_3_ipponMinusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -891,13 +891,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="3" column="2">
-           <widget class="QLCDNumber" name="lcdNumber_6"/>
+           <widget class="QLCDNumber" name="_3_yukoFighterWhite"/>
           </item>
           <item row="7" column="1">
-           <widget class="QLCDNumber" name="lcdNumber_4"/>
+           <widget class="QLCDNumber" name="_3_wazariFighterBlue"/>
           </item>
           <item row="6" column="2">
-           <widget class="QPushButton" name="pushButton_15">
+           <widget class="QPushButton" name="_3_yukoPlusFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -916,7 +916,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="2" column="2">
-           <widget class="QPushButton" name="pushButton_13">
+           <widget class="QPushButton" name="_3_yukoPlusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -935,7 +935,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QPushButton" name="pushButton_10">
+           <widget class="QPushButton" name="_3_wazariMinusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -954,7 +954,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="4" column="4">
-           <widget class="QPushButton" name="pushButton_18">
+           <widget class="QPushButton" name="_3_shidoMinusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -973,10 +973,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="3" column="4">
-           <widget class="QLCDNumber" name="lcdNumber_7"/>
+           <widget class="QLCDNumber" name="_3_shidoFighterWhite"/>
           </item>
           <item row="2" column="1">
-           <widget class="QPushButton" name="pushButton_9">
+           <widget class="QPushButton" name="_3_wazariPlusFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -995,10 +995,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="7" column="2">
-           <widget class="QLCDNumber" name="lcdNumber_5"/>
+           <widget class="QLCDNumber" name="_3_yukoFighterBlue"/>
           </item>
           <item row="8" column="4">
-           <widget class="QPushButton" name="pushButton_20">
+           <widget class="QPushButton" name="_3_shidoMinusFighterBlue">
             <property name="minimumSize">
              <size>
               <width>50</width>
@@ -1006,26 +1006,26 @@ li.checked::marker { content: &quot;\2612&quot;; }
              </size>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Shido--</string>
             </property>
            </widget>
           </item>
           <item row="2" column="5" rowspan="3">
-           <widget class="Line" name="line_6">
+           <widget class="Line" name="_3_line_4">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
            </widget>
           </item>
           <item row="6" column="5" rowspan="3">
-           <widget class="Line" name="line_8">
+           <widget class="Line" name="_3_line_5">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
            </widget>
           </item>
           <item row="6" column="6">
-           <widget class="QPushButton" name="pushButton_22">
+           <widget class="QPushButton" name="_3_holdActiveFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -1044,7 +1044,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="2" column="6">
-           <widget class="QPushButton" name="pushButton_21">
+           <widget class="QPushButton" name="_3_holdActiveFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -1063,7 +1063,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="4" column="6">
-           <widget class="QPushButton" name="pushButton_23">
+           <widget class="QPushButton" name="_3_retireFighterWhite">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -1082,7 +1082,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="8" column="6">
-           <widget class="QPushButton" name="pushButton_24">
+           <widget class="QPushButton" name="_3_retireFighterBlue">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -1101,24 +1101,24 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="3" column="6">
-           <widget class="QLabel" name="label_21">
+           <widget class="QLabel" name="_3_labelFighterWhite">
             <property name="text">
              <string>Kämpfer Weiß</string>
             </property>
            </widget>
           </item>
           <item row="7" column="6">
-           <widget class="QLabel" name="label_29">
+           <widget class="QLabel" name="_3_labelFighterBlue">
             <property name="text">
              <string>Kämpfer Blau</string>
             </property>
            </widget>
           </item>
           <item row="1" column="7">
-           <widget class="QTimeEdit" name="timeEdit"/>
+           <widget class="QTimeEdit" name="_3_timeEditFight"/>
           </item>
           <item row="1" column="0" colspan="7">
-           <widget class="QProgressBar" name="progressBar">
+           <widget class="QProgressBar" name="_3_timeFight">
             <property name="value">
              <number>24</number>
             </property>
@@ -1141,21 +1141,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="2" column="7" rowspan="3">
-           <widget class="QLabel" name="label_30">
+           <widget class="QLabel" name="_3_nameFighterWhite">
             <property name="text">
              <string>Name</string>
             </property>
            </widget>
           </item>
           <item row="5" column="0" colspan="8">
-           <widget class="Line" name="line_2">
+           <widget class="Line" name="_3_line">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
           <item row="6" column="7" rowspan="3">
-           <widget class="QLabel" name="label_31">
+           <widget class="QLabel" name="_3_nameFighterBlue">
             <property name="text">
              <string>Name</string>
             </property>
@@ -1168,37 +1168,37 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <widget class="QWidget" name="_4_Board">
        <layout class="QHBoxLayout" name="horizontalLayout_6">
         <item>
-         <layout class="QGridLayout" name="gridLayout_2">
+         <layout class="QGridLayout" name="_4_gridLayout">
           <item row="1" column="1">
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="_4_genBoard">
             <property name="text">
              <string>generiere Board</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QCheckBox" name="checkBox">
+           <widget class="QCheckBox" name="_4_checkFullScreen">
             <property name="text">
              <string>Vollbild</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="label_19">
+           <widget class="QLabel" name="_4_labelFullScreen">
             <property name="text">
              <string>Scoreboard Vollbildmodus</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_20">
+           <widget class="QLabel" name="_4_labelBoard">
             <property name="text">
              <string>generiere Scoreboard</string>
             </property>
            </widget>
           </item>
           <item row="0" column="0" colspan="2">
-           <widget class="QTextBrowser" name="textBrowser"/>
+           <widget class="QTextBrowser" name="_4_textBrowser"/>
           </item>
          </layout>
         </item>
@@ -1302,6 +1302,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>_4_genBoard</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>generateScoreboard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>518</x>
+     <y>471</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>621</x>
+     <y>482</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>enterStartWindow()</slot>
@@ -1309,5 +1325,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <slot>enterPreperationWindow()</slot>
   <slot>enterControlWindow()</slot>
   <slot>enterBoardWindow()</slot>
+  <slot>generateScoreboard()</slot>
  </slots>
 </ui>

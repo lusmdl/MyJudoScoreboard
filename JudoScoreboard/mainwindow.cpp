@@ -7,6 +7,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "scoreboard.h"
 #include <QDebug>
 
 /**
@@ -139,5 +140,17 @@ void MainWindow::enterBoardWindow() {
         
         qDebug() << "Object not found in stackedWidget.";
     }
+}
+
+void MainWindow::generateScoreboard() {
+
+    // generate the Scoreboard
+
+    qDebug() << "open Board";
+
+    // creating object an open window
+    board = new Scoreboard(this);
+    board->show();
+
 }
 
