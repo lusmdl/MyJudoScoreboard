@@ -24,20 +24,9 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
     public:
+
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
-
-    private:
-        Ui::MainWindow *ui;
-
-        // creating a global object for the scoreboard
-        Scoreboard *board;
-
-        // parameters
-
-        uint widthScreen;
-        uint heightScreen;
-        const double factorScreen {0.5};
 
     private slots:
 
@@ -53,5 +42,17 @@ class MainWindow : public QMainWindow {
         void keyPressEvent(QKeyEvent *event);
         void deleteBoardPointer();
 
+    private:
+
+        Ui::MainWindow *ui;
+
+        // creating a global object for the scoreboard
+        Scoreboard *board;
+
+        // parameters
+
+        uint widthScreen;
+        uint heightScreen;
+        const double factorScreen {0.5};
 };
 #endif // MAINWINDOW_H

@@ -17,15 +17,18 @@ class Scoreboard : public QDialog
 {
     Q_OBJECT
 
-    signals:
-        void deleteBoardPointer();
-
 
     public:
         explicit Scoreboard(QWidget *parent = nullptr);
         ~Scoreboard();
 
         QGraphicsScene* getScene() const;
+
+    signals:
+        void deleteBoardPointer();
+
+    private slots:
+        void closeBoard();
 
     protected:
         void resizeEvent(QResizeEvent *event) override;
@@ -40,9 +43,6 @@ class Scoreboard : public QDialog
         void createRects();
         void updateRectsSize();
         void updateRects();
-
-    private slots:
-        void closeBoard();
 };
 
 #endif // SCOREBOARD_H

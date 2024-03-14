@@ -2,13 +2,7 @@
 #include "ui_scoreboard.h"
 #include <QDebug>
 
-Scoreboard::Scoreboard(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::Scoreboard),
-    scene(new QGraphicsScene(this)),
-    graphicsView(new QGraphicsView(scene)), // Erstellen Sie QGraphicsView
-    upperRect(nullptr),
-    lowerRect(nullptr) {
+Scoreboard::Scoreboard(QWidget *parent) : QDialog(parent), ui(new Ui::Scoreboard), scene(new QGraphicsScene(this)), graphicsView(new QGraphicsView(scene)), upperRect(nullptr), lowerRect(nullptr) {
 
     // constructor of scoreboard class
 
@@ -95,17 +89,4 @@ void Scoreboard::closeBoard() {
     emit deleteBoardPointer();
 }
 
-void Scoreboard::updateRects() {
-
-    qDebug() << "Scoreboard::updateRects()";
-
-    int width = graphicsView->viewport()->width();
-    int height = graphicsView->viewport()->height();
-
-    // Obere Hälfte weiß
-    upperRect->setRect(0, 0, width, height / 2);
-
-    // Untere Hälfte blau
-    lowerRect->setRect(0, height / 2, width, height / 2);
-}
 

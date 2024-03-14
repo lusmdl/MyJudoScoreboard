@@ -16,10 +16,7 @@
 *@param
 *@return
 */
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow),
-    board(nullptr) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), board(nullptr) {
 
     // constructor
 
@@ -63,6 +60,7 @@ MainWindow::~MainWindow() {
 
     // Falls das Scoreboard-Objekt existiert, löschen Sie es und setzen Sie den Pointer auf nullptr
     if (board != nullptr) {
+
         delete board;
         board = nullptr;
     }
@@ -186,7 +184,7 @@ void MainWindow::generateScoreboard() {
         qDebug() << "generate new board";
 
         board = new Scoreboard(this);
-        board->setWindowFlags(Qt::Dialog); // oder Qt::SubWindow, je nach Bedarf
+        board->setWindowFlags(Qt::Dialog);
         enableBoardFullScreen();
         board->setFixedSize(widthScreen * factorScreen, heightScreen * factorScreen);
         board->show();
