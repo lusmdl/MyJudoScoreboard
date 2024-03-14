@@ -16,11 +16,14 @@
 *@param
 *@return
 */
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), board(nullptr) {
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow),
+    board(nullptr) {
 
     // constructor
 
-    qDebug() << "MainWindow constructor called.";
+    qDebug() << "MainWindow::MainWindow(QWidget *parent)";
 
     ui->setupUi(this);
 
@@ -29,6 +32,25 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     // Setzen Sie die WindowFlags, um das Hauptfenster über anderen Fenstern zu halten
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+
+    // Zugriff auf den primären Bildschirm
+    QScreen *primaryScreen = QGuiApplication::primaryScreen();
+    if (primaryScreen) {
+
+        // Abrufen der Auflösung des primären Bildschirms
+
+        QRect screenGeometry = primaryScreen->geometry();
+        widthScreen = screenGeometry.width();
+        heightScreen = screenGeometry.height();
+
+        // Ausgabe der Bildschirmauflösung
+        qDebug() << "Screen Width:" << widthScreen;
+        qDebug() << "Screen Height:" << heightScreen;
+    } else {
+
+        // Fehlermeldung, wenn der primäre Bildschirm nicht verfügbar ist
+        qDebug() << "Failed to access primary screen.";
+    }
 }
 
 
@@ -37,7 +59,7 @@ MainWindow::~MainWindow() {
     // destructor
 
     // debug information
-    qDebug() << "MainWindow destructor called.";
+    qDebug() << "MainWindow::~MainWindow()";
 
     // Falls das Scoreboard-Objekt existiert, löschen Sie es und setzen Sie den Pointer auf nullptr
     if (board != nullptr) {
@@ -52,7 +74,7 @@ void MainWindow::enterStartWindow() {
 
     // start window contains some helpfull informations
 
-    qDebug() << "enter Start";
+    qDebug() << "MainWindow::enterStartWindow()";
 
     // open correct page
     int index = 0;
@@ -73,7 +95,7 @@ void MainWindow::enterSetupWindow() {
 
     // setup contains all settings and options for the program
 
-    qDebug() << "enter Setup";
+    qDebug() << "MainWindow::enterSetupWindow()";
 
     // open correct page
     int index = 1;
@@ -95,7 +117,7 @@ void MainWindow::enterPreperationWindow() {
     // Preparation is the window of opportunity when it comes to the upcoming battles
     // Tournaments, teams and fighters can be managed here
 
-    qDebug() << "enter Preperation";
+    qDebug() << "MainWindow::enterPreperationWindow()";
 
     // open correct page
     int index = 2;
@@ -116,7 +138,7 @@ void MainWindow::enterControlWindow() {
 
     // The control page provides everything you need to manage and control the board
     
-    qDebug() << "enter Control";
+    qDebug() << "MainWindow::enterControlWindow()";
 
     // open correct page
     int index = 3;
@@ -138,7 +160,7 @@ void MainWindow::enterBoardWindow() {
     // In the board page, you can open a second window for an additional screen
     // manage the second window
 
-    qDebug() << "enter Board";
+    qDebug() << "MainWindow::enterBoardWindow()";
 
     // open correct page
     int index = 4;
@@ -156,7 +178,7 @@ void MainWindow::enterBoardWindow() {
 
 void MainWindow::generateScoreboard() {
 
-    qDebug() << "open Board";
+    qDebug() << "MainWindow::generateScoreboard()";
 
     // Erstellen Sie ein neues Scoreboard-Objekt, falls keins vorhanden ist
     if (!board) {
@@ -164,18 +186,13 @@ void MainWindow::generateScoreboard() {
         qDebug() << "generate new board";
 
         board = new Scoreboard(this);
-        board->setWindowFlags(Qt::Tool); // oder Qt::SubWindow, je nach Bedarf
-        board->setFixedSize(1280, 720); // Setzen Sie die feste Größe
-        board->show();
-
+        board->setWindowFlags(Qt::Dialog); // oder Qt::SubWindow, je nach Bedarf
         enableBoardFullScreen();
+        board->setFixedSize(widthScreen * factorScreen, heightScreen * factorScreen);
+        board->show();
 
         // Verbindung des Signals `deleteBoardPointer()` des Scoreboard-Objekts mit der Slot-Funktion `deleteBoardPointer()` der MainWindow-Klasse
         connect(board, &Scoreboard::deleteBoardPointer, this, &MainWindow::deleteBoardPointer);
-
-        // MainWindow aktivieren, um es über dem Scoreboard zu platzieren
-        this->raise();
-        this->activateWindow();
     }
     else {
 
@@ -188,38 +205,28 @@ void MainWindow::generateScoreboard() {
 
 void MainWindow::enableBoardFullScreen() {
 
+    qDebug() << "MainWindow::enableBoardFullScreen()";
+
     if (ui->_4_checkFullScreen->isChecked()) {
 
-        qDebug() << "enable full screen";
+        qDebug() << "check full screen";
 
         // Scoreboard im Vollbildmodus anzeigen, nur wenn es bereits erstellt wurde
         if (board != nullptr) {
 
-            /*
-            // Wenn der Vollbildmodus aktiviert ist, passen Sie die Szene des Scoreboards an die Größe des Bildschirms an
-            QScreen *primaryScreen = QGuiApplication::primaryScreen();
-            if (primaryScreen) {
-
-                QRect screenGeometry = primaryScreen->geometry();
-                board->resize(screenGeometry.width(), screenGeometry.height());
-            } else {
-
-                qDebug() << "Failed to access primary screen.";
-            }
-             */
+            qDebug() << "set window to full screen";
 
             board->showFullScreen();
         }
     }
     else {
 
-        qDebug() << "disable full screen";
+        qDebug() << "uncheck full screen";
 
         // Vollbildmodus beenden und Scoreboard im normalen Modus anzeigen, nur wenn es bereits erstellt wurde
         if (board != nullptr) {
 
-            // Wenn der Vollbildmodus deaktiviert ist, setzen Sie die Szene des Scoreboards auf die statische Größe
-            //board->resize(1280, 720);
+            qDebug() << "set window back to normal";
 
             board->showNormal();
         }
@@ -228,11 +235,15 @@ void MainWindow::enableBoardFullScreen() {
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
 
+    qDebug() << "MainWindow::keyPressEvent(QKeyEvent *event)";
+
     // Überprüfen, ob die gedrückte Taste die Escape-Taste ist
 
     if (event->key() == Qt::Key_Escape) {
 
         // Scoreboard schließen, wenn es geöffnet ist
+
+        qDebug() << "Key_Escape pressed";
 
         if (board != nullptr && board->isVisible()) {
 
@@ -246,13 +257,14 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
 
 void MainWindow::deleteBoardPointer() {
 
+    qDebug() << "MainWindow::deleteBoardPointer()";
+
     if (board) {
 
         // Löschen Sie den Board-Pointer, wenn das Scoreboard-Fenster abgelehnt wird
 
-        qDebug() << "delete board pointer";
-
         delete board;
         board = nullptr;
+        qDebug() << "pointer gelöscht";
     }
 }

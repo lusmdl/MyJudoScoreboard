@@ -39,6 +39,7 @@ class Scoreboard : public QDialog
 
         void createRects();
         void updateRectsSize();
+        void updateRects();
 
     private slots:
         void closeBoard();

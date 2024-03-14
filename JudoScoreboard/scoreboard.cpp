@@ -10,6 +10,10 @@ Scoreboard::Scoreboard(QWidget *parent) :
     upperRect(nullptr),
     lowerRect(nullptr) {
 
+    // constructor of scoreboard class
+
+    qDebug() << "Scoreboard::Scoreboard(QWidget *parent)";
+
     ui->setupUi(this);
 
     // Erstellen Sie ein vertikales Layout direkt auf dem Dialog
@@ -19,13 +23,22 @@ Scoreboard::Scoreboard(QWidget *parent) :
     layout->addWidget(graphicsView);
 
     createRects();
+
+    // connections : signal -> slot
+
 }
 
 Scoreboard::~Scoreboard() {
+
+    qDebug() << "Scoreboard::~Scoreboard()";
+
     delete ui;
 }
 
 void Scoreboard::createRects() {
+
+    qDebug() << "Scoreboard::createRects()";
+
     int width = graphicsView->width();
     int height = graphicsView->height();
 
@@ -39,6 +52,9 @@ void Scoreboard::createRects() {
 }
 
 void Scoreboard::updateRectsSize() {
+
+    qDebug() << "Scoreboard::updateRectsSize()";
+
     int width = graphicsView->width();
     int height = graphicsView->height();
 
@@ -51,6 +67,12 @@ void Scoreboard::updateRectsSize() {
 
 
 void Scoreboard::resizeEvent(QResizeEvent *event) {
+
+    // Rufen Sie die Basis-Klasse-Methode auf, um das Ereignis zu verarbeiten
+    QDialog::resizeEvent(event);
+
+    qDebug() << "Scoreboard::resizeEvent(QResizeEvent *event)";
+
     updateRectsSize();
 
     // Übergeben Sie die gesamte Szene und verwenden Sie die Option Qt::KeepAspectRatio,
@@ -59,14 +81,31 @@ void Scoreboard::resizeEvent(QResizeEvent *event) {
 }
 
 QGraphicsScene* Scoreboard::getScene() const {
+
+    qDebug() << "Scoreboard::getScene()";
+
     return scene;
 }
 
 void Scoreboard::closeBoard() {
 
-    // message to the programmer to check if it´s working
-    qDebug() << "close board";
+    qDebug() << "Scoreboard::closeBoard()";
 
     // trigger signal for the other mainwindow class
     emit deleteBoardPointer();
 }
+
+void Scoreboard::updateRects() {
+
+    qDebug() << "Scoreboard::updateRects()";
+
+    int width = graphicsView->viewport()->width();
+    int height = graphicsView->viewport()->height();
+
+    // Obere Hälfte weiß
+    upperRect->setRect(0, 0, width, height / 2);
+
+    // Untere Hälfte blau
+    lowerRect->setRect(0, height / 2, width, height / 2);
+}
+

@@ -33,6 +33,12 @@ class MainWindow : public QMainWindow {
         // creating a global object for the scoreboard
         Scoreboard *board;
 
+        // parameters
+
+        uint widthScreen;
+        uint heightScreen;
+        const double factorScreen {0.5};
+
     private slots:
 
         //navigate through pages
