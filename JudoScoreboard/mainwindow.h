@@ -37,9 +37,13 @@ class MainWindow : public QMainWindow {
         void enterPreperationWindow();
         void enterControlWindow();
         void enterBoardWindow();
+
         void generateScoreboard();
-        void enableBoardFullScreen();
+
+        void setBoardScreenMode();
+
         void keyPressEvent(QKeyEvent *event);
+
         void deleteBoardPointer();
 
     private:
@@ -48,11 +52,5 @@ class MainWindow : public QMainWindow {
 
         // creating a global object for the scoreboard
         Scoreboard *board;
-
-        // parameters
-
-        uint widthScreen;
-        uint heightScreen;
-        const double factorScreen {0.5};
 };
 #endif // MAINWINDOW_H
