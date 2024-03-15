@@ -402,7 +402,7 @@ void MainWindow::deleteBoardPointer() {
 
     qDebug() << "MainWindow::deleteBoardPointer()";
 
-    if (board) {
+    if (board != nullptr) {
 
         // Löschen Sie den Board-Pointer, wenn das Scoreboard-Fenster rejected wird
 

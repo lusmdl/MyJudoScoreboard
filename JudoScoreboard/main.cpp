@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     MainWindow w;
 
     // Scoreboard erstellen
-    Scoreboard s;
+    //Scoreboard s;
 
     w.show();
 

@@ -10,10 +10,35 @@
  *
  * @param parent Pointer to the parent widget.
  */
-Scoreboard::Scoreboard(QWidget *parent) : QDialog(parent),
+Scoreboard::Scoreboard(QWidget *parent) :
+    QDialog(parent),
     ui(new Ui::Scoreboard),
+    layout(new QVBoxLayout(this)),
     scene(new QGraphicsScene(this)),
-    graphicsView(new QGraphicsView(scene)) {
+    graphicsView(new QGraphicsView(scene)),
+    upperRect(nullptr),
+    lowerRect(nullptr),
+    blackRect(nullptr),
+    blackRectTextItem(nullptr),
+    widthScreen(0),
+    heightScreen(0),
+    widthWin(0),
+    heightWin(0),
+    widthGraph(0),
+    heightGraph(0),
+    widthGraphViewPort(0),
+    heightGraphViewPort(0),
+    widthScene(0),
+    heightScene(0),
+    secondsTimer(0),
+    upValueIppon(0),
+    upValueWazari(0),
+    upValueYuko(0),
+    upValueShido(0),
+    downValueIppon(0),
+    downValueWazari(0),
+    downValueYuko(0),
+    downValueShido(0) {
 
     // constructor of scoreboard class
 
@@ -27,7 +52,7 @@ Scoreboard::Scoreboard(QWidget *parent) : QDialog(parent),
     this->resize(widthScreen * factorScreen, heightScreen * factorScreen);
 
     // Erstellen Sie ein neues vertikales Layout und setzen Sie es als Layout des Scoreboard-Dialogs.
-    layout = new QVBoxLayout(this);
+    //layout = new QVBoxLayout(this);
 
     // Fügen Sie die QGraphicsView-Komponente, die zur Anzeige von Grafiken verwendet wird, dem Layout hinzu.
     layout->addWidget(graphicsView);
@@ -54,7 +79,17 @@ Scoreboard::~Scoreboard() {
 
     qDebug() << "Scoreboard::~Scoreboard()";
 
+    delete blackRectTextItem;
+    delete blackRect;
+    delete lowerRect;
+    delete upperRect;
+    delete graphicsView;
+    delete scene;
+    delete layout;
     delete ui;
+
+    // Restliche Pointer löschen, falls sie initialisiert wurden
+
 }
 
 
