@@ -10,6 +10,7 @@
 
 #include <QMainWindow>
 #include <QKeyEvent>
+#include <QTimer>
 #include "scoreboard.h"
 
 QT_BEGIN_NAMESPACE
@@ -46,11 +47,15 @@ class MainWindow : public QMainWindow {
 
         void deleteBoardPointer();
 
+        void mainLoop();
+
     private:
 
         Ui::MainWindow *ui;
 
         // creating a global object for the scoreboard
         Scoreboard *board;
+
+        QTimer mainTimer;
 };
 #endif // MAINWINDOW_H

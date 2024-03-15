@@ -26,15 +26,6 @@ int main(int argc, char *argv[]) {
     // Scoreboard erstellen
     Scoreboard s;
 
-    // GraphicsView erstellen
-    QGraphicsView *graphicsView = new QGraphicsView;
-    graphicsView->setScene(s.getScene()); // Setzen Sie die Szene des GraphicsView auf die Szene des Scoreboards
-
-    // Horizontales Layout erstellen
-    QHBoxLayout *layout = new QHBoxLayout;
-    layout->addWidget(graphicsView); // GraphicsView zum Layout hinzufügen
-    w.setLayout(layout); // Layout zum Hauptfenster setzen
-
     w.show();
 
     return a.exec();
