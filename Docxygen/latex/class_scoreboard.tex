@@ -1,0 +1,143 @@
+\doxysection{Scoreboard Class Reference}
+\hypertarget{class_scoreboard}{}\label{class_scoreboard}\index{Scoreboard@{Scoreboard}}
+
+
+{\ttfamily \#include $<$scoreboard.\+h$>$}
+
+Inheritance diagram for Scoreboard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scoreboard}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scoreboard_ac0b254c52aa4fee2c3040522274e8b14}{delete\+Board\+Pointer}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scoreboard_a056923c3f614bb76a30b318db8603f81}{Scoreboard}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_scoreboard}{Scoreboard} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scoreboard_ad3cdb77d3fa39bbae8ab5fe97b58daef}{\texorpdfstring{$\sim$}{\string~}\+Scoreboard}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_scoreboard}{Scoreboard} class. \end{DoxyCompactList}\item 
+QGraphics\+Scene \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scoreboard_a45dfd37a48c8a7d781939c6811869902}{get\+Scene}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the QGraphics\+Scene associated with the scoreboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scoreboard_a211fd0e9713327d34777afb430e996ba}{set\+Timer}} (unsigned int seconds)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scoreboard_a4554c07c003912a278390e0f40696357}{resize\+Event}} (QResize\+Event \texorpdfstring{$\ast$}{*}event) override
+\begin{DoxyCompactList}\small\item\em Handles resize events for the scoreboard dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{scoreboard_8h_source_l00022}{22}} of file \mbox{\hyperlink{scoreboard_8h_source}{scoreboard.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_scoreboard_a056923c3f614bb76a30b318db8603f81}\label{class_scoreboard_a056923c3f614bb76a30b318db8603f81} 
+\index{Scoreboard@{Scoreboard}!Scoreboard@{Scoreboard}}
+\index{Scoreboard@{Scoreboard}!Scoreboard@{Scoreboard}}
+\doxysubsubsection{\texorpdfstring{Scoreboard()}{Scoreboard()}}
+{\footnotesize\ttfamily Scoreboard\+::\+Scoreboard (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \doxylink{class_scoreboard}{Scoreboard} class. 
+
+This constructor initializes a \doxylink{class_scoreboard}{Scoreboard} object with the specified parent widget. It sets up the user interface, graphics scene, and graphics view for displaying the scoreboard.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{scoreboard_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{scoreboard_8cpp_source}{scoreboard.\+cpp}}.
+
+\Hypertarget{class_scoreboard_ad3cdb77d3fa39bbae8ab5fe97b58daef}\label{class_scoreboard_ad3cdb77d3fa39bbae8ab5fe97b58daef} 
+\index{Scoreboard@{Scoreboard}!````~Scoreboard@{\texorpdfstring{$\sim$}{\string~}Scoreboard}}
+\index{````~Scoreboard@{\texorpdfstring{$\sim$}{\string~}Scoreboard}!Scoreboard@{Scoreboard}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Scoreboard()}{\string~Scoreboard()}}
+{\footnotesize\ttfamily Scoreboard\+::\texorpdfstring{$\sim$}{\string~}\+Scoreboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{class_scoreboard}{Scoreboard} class. 
+
+This destructor cleans up resources allocated by the \doxylink{class_scoreboard}{Scoreboard} object. It deletes the user interface object to free up memory. 
+
+Definition at line \mbox{\hyperlink{scoreboard_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{scoreboard_8cpp_source}{scoreboard.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scoreboard_ac0b254c52aa4fee2c3040522274e8b14}\label{class_scoreboard_ac0b254c52aa4fee2c3040522274e8b14} 
+\index{Scoreboard@{Scoreboard}!deleteBoardPointer@{deleteBoardPointer}}
+\index{deleteBoardPointer@{deleteBoardPointer}!Scoreboard@{Scoreboard}}
+\doxysubsubsection{\texorpdfstring{deleteBoardPointer}{deleteBoardPointer}}
+{\footnotesize\ttfamily void Scoreboard\+::delete\+Board\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_scoreboard_a45dfd37a48c8a7d781939c6811869902}\label{class_scoreboard_a45dfd37a48c8a7d781939c6811869902} 
+\index{Scoreboard@{Scoreboard}!getScene@{getScene}}
+\index{getScene@{getScene}!Scoreboard@{Scoreboard}}
+\doxysubsubsection{\texorpdfstring{getScene()}{getScene()}}
+{\footnotesize\ttfamily QGraphics\+Scene \texorpdfstring{$\ast$}{*} Scoreboard\+::get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the QGraphics\+Scene associated with the scoreboard. 
+
+This method returns a pointer to the QGraphics\+Scene object that is associated with the scoreboard. Debug message is outputted to the console to indicate the execution of this method.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the QGraphics\+Scene object associated with the scoreboard, or nullptr if no scene is associated. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{scoreboard_8cpp_source_l00274}{274}} of file \mbox{\hyperlink{scoreboard_8cpp_source}{scoreboard.\+cpp}}.
+
+\Hypertarget{class_scoreboard_a4554c07c003912a278390e0f40696357}\label{class_scoreboard_a4554c07c003912a278390e0f40696357} 
+\index{Scoreboard@{Scoreboard}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!Scoreboard@{Scoreboard}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void Scoreboard\+::resize\+Event (\begin{DoxyParamCaption}\item[{QResize\+Event \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Handles resize events for the scoreboard dialog. 
+
+This method is called whenever the scoreboard dialog is resized. It processes the resize event by calling the base class method, and then performs additional tasks related to resizing the scene, resizing the graphics view, and updating the size of rectangles within the scene. Debug messages are outputted to the console to indicate the execution of this method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & A pointer to the resize event object containing information about the resize event. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{scoreboard_8cpp_source_l00680}{680}} of file \mbox{\hyperlink{scoreboard_8cpp_source}{scoreboard.\+cpp}}.
+
+\Hypertarget{class_scoreboard_a211fd0e9713327d34777afb430e996ba}\label{class_scoreboard_a211fd0e9713327d34777afb430e996ba} 
+\index{Scoreboard@{Scoreboard}!setTimer@{setTimer}}
+\index{setTimer@{setTimer}!Scoreboard@{Scoreboard}}
+\doxysubsubsection{\texorpdfstring{setTimer()}{setTimer()}}
+{\footnotesize\ttfamily void Scoreboard\+::set\+Timer (\begin{DoxyParamCaption}\item[{unsigned int}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{scoreboard_8cpp_source_l00296}{296}} of file \mbox{\hyperlink{scoreboard_8cpp_source}{scoreboard.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sonyx/\+Documents/qt/\+My\+Judo\+Scoreboard/\+Judo\+Scoreboard/\mbox{\hyperlink{scoreboard_8h}{scoreboard.\+h}}\item 
+C\+:/\+Users/\+Sonyx/\+Documents/qt/\+My\+Judo\+Scoreboard/\+Judo\+Scoreboard/\mbox{\hyperlink{scoreboard_8cpp}{scoreboard.\+cpp}}\end{DoxyCompactItemize}

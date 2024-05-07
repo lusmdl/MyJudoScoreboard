@@ -1,0 +1,61 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{C:/Users/Sonyx/Documents/qt/MyJudoScoreboard/JudoScoreboard/mainwindow.h@{C:/Users/Sonyx/Documents/qt/MyJudoScoreboard/JudoScoreboard/mainwindow.h}}
+\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scoreboard_8h}{scoreboard.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00016}00016\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00017}\mbox{\hyperlink{namespace_ui}{00017}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00021}00021\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00023}\mbox{\hyperlink{class_main_window}{00023}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00025}00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//navigate\ through\ pages}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enterStartWindow();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enterSetupWindow();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enterPreperationWindow();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enterControlWindow();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enterBoardWindow();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ generateScoreboard();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setBoardScreenMode();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ keyPressEvent(QKeyEvent\ *event);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ deleteBoardPointer();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ mainLoop();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ Ui::MainWindow\ *ui;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ creating\ a\ global\ object\ for\ the\ scoreboard}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scoreboard}{Scoreboard}}\ *board;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ QTimer\ mainTimer;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00060}00060\ \};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00061}00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}
